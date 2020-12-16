@@ -1,7 +1,7 @@
-const express = require("express");
+const express = require('express');
 
 const router = express.Router();
-const recommendController = require("../../controller/recommendController");
+const recommendController = require('../../controller/recommendController');
 
-router.post("/", recommendController.getRecommendVideo);
+router.post('/', recommendController.getRecommendVideo);
 module.exports = router;
