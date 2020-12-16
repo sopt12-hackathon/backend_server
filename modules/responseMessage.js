@@ -17,7 +17,7 @@ module.exports = {
   ALREADY_ID: "존재하는 ID 입니다.",
   NO_USER: "존재하지않는 유저 id 입니다.",
   ALREADY_EMAIL: "이미 존재하는 이메일 입니다.",
-  NO_EMAIL: '존재하지 않는 이메일 입니다.',
+  NO_EMAIL: "존재하지 않는 이메일 입니다.",
   MISS_MATCH_PW: "비밀번호가 일치하지 않습니다",
 
   /* User */
@@ -51,11 +51,11 @@ module.exports = {
   SAVE_LIKE_FAIL: "종아요, 별로에요 반영에 실패했습니다.",
 
   /* 토큰 */
-  EMPTY_TOKEN: '토큰 값이 없습니다.',
-  EXPIRED_TOKEN: '토큰 값이 만료되었습니다.',
-  INVALID_TOKEN: '유효하지 않은 토큰값입니다.',
-  AUTH_SUCCESS: '인증에 성공했습니다.',
-  ISSUE_SUCCESS: '새로운 토큰이 생성되었습니다.',
+  EMPTY_TOKEN: "토큰 값이 없습니다.",
+  EXPIRED_TOKEN: "토큰 값이 만료되었습니다.",
+  INVALID_TOKEN: "유효하지 않은 토큰값입니다.",
+  AUTH_SUCCESS: "인증에 성공했습니다.",
+  ISSUE_SUCCESS: "새로운 토큰이 생성되었습니다.",
 
   /* 비디오 */
   NO_VIDEO: "존재하지않는 비디오 id 입니다.",
@@ -64,4 +64,4 @@ module.exports = {
 
   /* 서버에러 */
   INTERNAL_SERVER_ERROR: "서버 내부 오류",
-}
+};
