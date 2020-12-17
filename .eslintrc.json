@@ -13,6 +13,7 @@
     "ignorePatterns": ["node_modules/"],
     "rules": {
         "quotes": ["error", "single"],
-        "no-console":0
+        "no-console":0,
+        "implicit-arrow-linebreak": ["error", "below"]
     }
 }
