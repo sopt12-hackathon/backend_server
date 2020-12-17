@@ -1,6 +1,28 @@
-// module.exports = (sequelize, DataTypes) => sequelize.define('USER_TB', {
-
-// }, {
-//   // 모델의 옵션들을 지정하는곳
-
-// });
+module.exports = (sequelize, DataTypes) =>
+  sequelize.define(
+    'USER_TB',
+    {
+      email: {
+        type: DataTypes.STRING(30),
+        unique: true,
+        allowNull: false,
+      },
+      name: {
+        type: DataTypes.STRING(20),
+        allowNull: false,
+      },
+      password: {
+        type: DataTypes.STRING(200),
+        allowNull: false,
+      },
+      salt: {
+        type: DataTypes.STRING(200),
+        allowNull: false,
+      },
+    },
+    {
+      underscored: true,
+      freezeTableName: true,
+      timestamps: true,
+    },
+  );
