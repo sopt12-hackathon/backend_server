@@ -4,4 +4,14 @@
 
 // const { ExerciseVideo, Hashtag } = require('../models');
 
-module.exports = {};
+// module.exports = {
+//   getRecommendVideo: async (req, res) => {
+//     try {
+
+//     } catch (error) {
+
+//     }
+//   },
+// };
+
+// module.exports = {};
