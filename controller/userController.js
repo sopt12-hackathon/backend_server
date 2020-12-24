@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 // // const { Op } = require('sequelize');
-// // const jwt = require('jsonwebtoken');
+const jwt = require('../modules/jwt');
 // const crypto = require('crypto');
 // // const dotenv = require('dotenv');
 // // const moment = require('moment');
@@ -77,7 +77,7 @@ module.exports = {
           .send(util.fail(statusCode.BAD_REQUEST, responseMessage.NO_USER));
       }
 
-      const { id, userName, salt, password: hashedPassword } = checkEmail;
+      const { salt, password: hashedPassword } = checkEmail;
       const user = await userService.signin(email, password, salt);
 
       if (user.password !== hashedPassword) {
@@ -89,15 +89,12 @@ module.exports = {
           );
       }
 
-      res
-        .status(statusCode.OK)
-        .send(
-          util.success(statusCode.OK, responseMessage.SIGN_IN_SUCCESS, {
-            id,
-            email,
-            userName,
-          }),
-        );
+      const { accessToken } = await jwt.sign(user);
+      res.status(statusCode.OK).send(
+        util.success(statusCode.OK, responseMessage.SIGN_IN_SUCCESS, {
+          accessToken,
+        }),
+      );
     } catch (error) {
       console.log(error);
       res
