@@ -1,3 +1,4 @@
+/* eslint-disable arrow-parens */
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -6,7 +7,7 @@ const logger = require('morgan');
 const { sequelize } = require('./models');
 
 sequelize
-  .sync({ force: true })
+  .sync({ force: false })
   .then(() => {
     console.log('데이터베이스 연결 성공.');
   })
