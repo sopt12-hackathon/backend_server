@@ -41,4 +41,5 @@ const isLoggedIn = {
     next();
   },
 };
+
 module.exports = isLoggedIn;
