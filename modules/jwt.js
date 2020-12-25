@@ -1,3 +1,4 @@
+/* eslint-disable arrow-parens */
 const jwt = require('jsonwebtoken');
 const { secretKey, options, refreshOptions } = require('../config/secretKey');
 
