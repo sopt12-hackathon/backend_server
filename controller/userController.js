@@ -89,10 +89,11 @@ module.exports = {
           );
       }
 
-      const { accessToken } = await jwt.sign(user);
+      const { accessToken, refreshToken } = await jwt.sign(user);
       res.status(statusCode.OK).send(
         util.success(statusCode.OK, responseMessage.SIGN_IN_SUCCESS, {
           accessToken,
+          refreshToken,
         }),
       );
     } catch (error) {

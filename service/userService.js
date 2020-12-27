@@ -49,4 +49,34 @@ module.exports = {
       throw err;
     }
   },
+  updateRefreshToken: async (id, refreshToken) => {
+    try {
+      const user = await User.update(
+        {
+          refreshToken,
+        },
+        {
+          where: {
+            id,
+          },
+        },
+      );
+      return user;
+    } catch (err) {
+      throw err;
+    }
+  },
+  checkUserId: async id => {
+    try {
+      const findByIdUser = await User.findOne({
+        where: {
+          id,
+        },
+        attributes: { exclude: ['password', 'salt'] },
+      });
+      return findByIdUser;
+    } catch (err) {
+      throw err;
+    }
+  },
 };
